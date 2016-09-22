@@ -30,7 +30,7 @@ cstr_t *cstr_append_size(cstr_t *str, const char *s, size_t len)
         char *temp = NULL;
         do
         {
-            temp = realloc(str->data, str->buf_size + len << 2);
+            temp = realloc(str->data, str->buf_size + (len << 2));
         } while (!temp);
 
         str->data = temp;
